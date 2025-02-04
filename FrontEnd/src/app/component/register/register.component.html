@@ -1,0 +1,48 @@
+
+<div class="main">
+    <div class="wrapper">
+      <h2>Registration</h2>
+      <form action="#" (ngSubmit)="SaveManagerInfo(m1)">
+        <div class="input-box">
+          <input type="text" id="mane" #title="ngModel" name="mname" [(ngModel)]="m1.mname" placeholder="Enter your name" required>
+          @if (title.invalid && title.touched) {
+            <div class="text-danger">
+              name required
+            </div>
+          }
+        </div>
+        <div class="input-box">
+          <input type="text" id="memail" #title="ngModel" name="memail" [(ngModel)]="m1.memail" placeholder="Enter your email" required>
+          @if (title.invalid && title.touched) {
+            <div class="text-danger">
+              email required
+            </div>
+          }
+        </div>
+        <div class="input-box">
+          <input type="password" id="mpass" #title="ngModel" name="mpass"  [(ngModel)]="m1.mpass" placeholder="Create password" required>
+          @if (title.invalid && title.touched) {
+            <div class="text-danger">
+              password required
+            </div>
+          }
+        </div>
+        <div class="input-box">
+          <input type="password" id="mcpass" #title="ngModel" name="mcpass" [(ngModel)]="model" placeholder="Confirm password" required>
+          @if (title.invalid && title.touched) {
+            <div class="text-danger">
+              confim password required
+            </div>
+          }
+        </div>
+        
+        <div class="input-box button">
+          <input type="Submit" value="Register Now">
+        </div>
+        <div class="text">
+          <h3>Already have an account? <a routerLink="/MangLogin">Login now</a></h3>
+        </div>
+      </form>
+    </div>
+    </div>
+ 

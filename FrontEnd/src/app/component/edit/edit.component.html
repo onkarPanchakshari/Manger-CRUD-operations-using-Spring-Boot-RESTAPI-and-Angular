@@ -1,0 +1,55 @@
+
+<div class="main">
+    <div class="wrapper">
+      <h2>Edit Form</h2>
+      <form action="#" (ngSubmit)="editedData(m3.mid,m3)">
+        <div class="input-box">
+            <input type="hidden" value="{{m3.mid}}">
+          <input type="text" id="mane" #title="ngModel" name="mname" value="{{m3.mname}}" [(ngModel)]="m3.mname" placeholder="Enter your name" required>
+          @if (title.invalid && title.touched) {
+            <div class="text-danger">
+              name required
+            </div>
+          }
+        </div>
+        <div class="input-box">
+          <input type="text" id="memail" #title="ngModel" name="memail" value="{{m3.memail}}" [(ngModel)]="m3.memail" placeholder="Enter your email" required>
+          @if (title.invalid && title.touched) {
+            <div class="text-danger">
+              email required
+            </div>
+          }
+        </div>
+        <div class="input-box">
+          <input type="text" id="mpass" #title="ngModel" name="mpass" value="{{m3.mpass}}"  [(ngModel)]="m3.mpass" placeholder="Create password" required>
+          @if (title.invalid && title.touched) {
+            <div class="text-danger">
+              password required
+            </div>
+          }
+        </div>
+        <div class="input-box">
+          <input type="text" id="mcpass" #title="ngModel" name="mcpass" [(ngModel)]="model" placeholder="Confirm password" required>
+          @if (title.invalid && title.touched) {
+            <div class="text-danger">
+              confim password required
+            </div>
+          }
+        </div>
+        
+        <div class="input-box button">
+          <input type="Submit" value="Edit Now" >
+        </div>
+        
+        <div class="text">
+            <h3>Back To Display button<a routerLink="/MangDisplay">Login now</a></h3>
+          </div>
+      </form>
+    </div>
+    </div>
+ 
+    <!-- (click)="navigatetodisplay()" -->
+
+
+<!-- <p>edit works!</p>
+<p>Recived Id :{{id}}</p> -->

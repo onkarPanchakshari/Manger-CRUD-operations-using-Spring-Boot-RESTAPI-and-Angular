@@ -1,0 +1,48 @@
+<table border="1px" class="table">
+
+    <thead>
+    <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>password</th>
+    <th>Action</th>
+
+   </tr>
+  
+    </thead>
+    <tbody>
+   <!-- <tr *ngFor="let x of m1"> -->
+ 
+   
+
+   @for (x of m1; track m1.indexOf) {
+    <tr>
+        <td>{{x.mid}}</td>
+        <td>{{x.mname}}</td>
+        <td>{{x.memail}}</td>
+        <td>{{x.mpass}}</td>
+        <td>
+
+            <button class="btn btn-primary" (click)="edit(x.mid)" (click)="navigateToEdit()" >Edit</button> |
+            
+
+            <app-edit *ngIf="selectedId !== undefined" [id] ="selectedId"></app-edit>
+           
+             
+           
+            <button class="btn btn-danger" (click)="del(x.mid)">Delete</button>
+
+            <!-- <button>Edit</button>|
+            <button >Delete</button> -->
+
+
+        </td>
+        <br>
+
+    </tr>
+    }
+  
+</tbody>
+
+</table>
